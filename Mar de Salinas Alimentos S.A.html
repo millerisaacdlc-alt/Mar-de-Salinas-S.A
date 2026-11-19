@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mar de Salinas Alimentos S.A.</title>
+<style>
+:root{--bg:#f3f7fa;--card:#fff;--tx:#10283d;--mut:#586f82;--ac:#f28c28;--nv:#0b2e4f;--tl:#1b9aaa;--hd:#0b2e4f;--hdt:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0a1722;--card:#12273a;--tx:#e8f1f8;--mut:#9db4c6;--hd:#06101a}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0a1722;--card:#12273a;--tx:#e8f1f8;--mut:#9db4c6;--hd:#06101a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",system-ui,sans-serif;line-height:1.55}
+header{background:var(--hd);color:var(--hdt);display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;flex-wrap:wrap;gap:8px}
+header b{font-size:1.25rem}header b span{color:var(--ac)}
+nav a{color:var(--hdt);text-decoration:none;margin-left:14px;font-size:.92rem}nav a:hover{color:var(--ac)}
+.hero{background:linear-gradient(135deg,#0b2e4f,#1b6f8f);color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:56px 5vw}
+.hero h1{font-size:clamp(2rem,5.5vw,3.4rem);line-height:1.08;margin:0 0 12px}.hero h1 span{color:var(--ac)}
+.btn{display:inline-block;background:var(--ac);color:#10283d;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;border:0;cursor:pointer;font-size:1rem}
+.btn.o{background:transparent;color:#fff;border:2px solid #fff;margin-left:8px}
+section{padding:44px 5vw}
+h2{font-size:1.9rem;margin:0 0 4px;color:var(--nv)}@media(prefers-color-scheme:dark){h2{color:#fff}}
+.sub{color:var(--mut);margin:0 0 24px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;background:var(--card);margin:-28px 5vw 0;padding:24px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.18);position:relative;text-align:center}
+.stats b{display:block;font-size:2.1rem;color:var(--ac)}.stats span{color:var(--mut);font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 3px 12px rgba(0,0,0,.12);text-align:center}
+.card h3{margin:8px 0 2px;font-size:1.05rem}.card p{margin:0;color:var(--mut);font-size:.9rem}.card .cn{text-align:left;font-size:.84rem;margin-top:10px;padding-top:10px;border-top:1px solid var(--mut)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;counter-reset:s;margin-bottom:28px}
+.step{background:var(--card);border-radius:14px;padding:16px;border-top:4px solid var(--tl);box-shadow:0 3px 12px rgba(0,0,0,.12)}
+.step:before{counter-increment:s;content:"0" counter(s);font-weight:800;color:var(--ac);font-size:1.3rem}
+.step h3{margin:2px 0;font-size:1rem}.step p{margin:0;color:var(--mut);font-size:.88rem}
+.screen{position:relative;background:#0b2e4f;border-radius:14px;overflow:hidden;aspect-ratio:16/6}
+.screen svg{width:100%;height:100%;display:block}
+.can{animation:mv 7s linear infinite}.paused .can{animation-play-state:paused}
+@keyframes mv{from{transform:translateX(-80px)}to{transform:translateX(420px)}}
+.pl{position:absolute;right:10px;bottom:10px;padding:8px 16px;font-size:.9rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{background:var(--card);border-radius:14px;padding:20px;box-shadow:0 3px 12px rgba(0,0,0,.12)}
+.box h3{margin:0 0 8px;color:var(--tl)}.box ul{margin:0;padding-left:20px;color:var(--mut)}
+.badges{display:flex;flex-wrap:wrap;gap:10px}.badges span{background:var(--nv);color:#fff;padding:8px 16px;border-radius:30px;font-weight:700;font-size:.9rem}
+form{display:grid;gap:10px}
+input,select,textarea{padding:11px;border-radius:8px;border:1px solid var(--mut);background:var(--card);color:var(--tx);font:inherit}
+.soc{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.soc span{background:var(--bg);padding:7px 12px;border-radius:20px;font-size:.88rem;font-weight:600}
+footer{background:var(--hd);color:#cfe0ec;text-align:center;padding:22px 5vw}
+#ok{color:var(--tl);font-weight:700}
+@media(max-width:760px){.hero,.two{grid-template-columns:1fr}.screen{aspect-ratio:16/8}}
+</style>
+</head>
+<body>
+<header><b>🐟 Mar de Salinas <span>Alimentos S.A.</span></b><nav><a href="#nosotros">Nosotros</a><a href="#productos">Productos</a><a href="#proceso">Proceso</a><a href="#calidad">Calidad</a><a href="#cotizar">Cotizar</a><a href="#contacto">Contacto</a></nav></header>
+
+<div class="hero">
+<div>
+<h1>Del mar de Salinas a <span>todo el mundo</span></h1>
+<p>Procesamos y enlatamos atún y pescado con altos estándares de calidad, inocuidad y respeto al océano.</p>
+<a class="btn" href="#cotizar">Solicitar cotización</a><a class="btn o" href="#proceso">Ver nuestro proceso</a>
+</div>
+<svg viewBox="0 0 320 220" role="img" aria-label="Barco pesquero y lata de atún">
+<rect y="150" width="320" height="70" fill="#1b9aaa" opacity=".55"/>
+<path d="M0 160Q20 148 40 160T80 160T120 160T160 160T200 160T240 160T280 160T320 160V220H0Z" fill="#0f5a7a"/>
+<path d="M40 128H190L172 156H58Z" fill="#f28c28"/><rect x="95" y="100" width="50" height="28" fill="#fff"/><rect x="108" y="82" width="22" height="18" fill="#e8f1f8"/><rect x="150" y="92" width="3" height="36" fill="#fff"/>
+<ellipse cx="255" cy="130" rx="46" ry="12" fill="#cfd8de"/><rect x="209" y="130" width="92" height="52" fill="#cfd8de"/><ellipse cx="255" cy="182" rx="46" ry="12" fill="#b5c2cb"/>
+<rect x="209" y="140" width="92" height="32" fill="#0b2e4f"/><path d="M228 156Q240 144 256 156Q240 168 228 156ZM256 156L268 148V164Z" fill="#f28c28"/>
+<ellipse cx="255" cy="130" rx="46" ry="12" fill="#e4eaee"/>
+</svg>
+</div>
+
+<div class="stats">
+<div><b data-n="25">0</b><span>años de experiencia</span></div>
+<div><b data-n="180">0</b><span>colaboradores</span></div>
+<div><b data-n="40">0</b><span>toneladas procesadas al día</span></div>
+<div><b data-n="15">0</b><span>países de exportación</span></div>
+</div>
+
+<section id="nosotros">
+<h2>Quiénes somos</h2><p class="sub">Empresa ecuatoriana del sector pesquero e industrial, fundada en 2001.</p>
+<div class="two">
+<div class="box"><h3>Misión</h3><p>Producir alimentos del mar seguros y de calidad, generando empleo local en Salinas y cuidando los recursos marinos.</p><h3>Visión</h3><p>Ser en 2030 una de las procesadoras de atún más reconocidas del Pacífico sudamericano.</p></div>
+<div class="box"><h3>Datos de la empresa</h3><ul><li>Gerente general: Ing. Andrés Villón</li><li>Sede y planta: sector Puerto Pesquero, Salinas, Santa Elena</li><li>Sector: pesca y manufactura de alimentos</li><li>Valores: calidad, seguridad, sostenibilidad y trabajo en equipo</li></ul></div>
+</div>
+</section>
+
+<section id="productos">
+<h2>Nuestros productos</h2><p class="sub">Presentaciones para consumo y para clientes industriales.</p>
+<div class="grid" id="prod"></div>
+</section>
+
+<section id="proceso">
+<h2>Proceso productivo</h2><p class="sub">De la materia prima al producto terminado.</p>
+<div class="steps">
+<div class="step"><h3>Recepción</h3><p>Control de temperatura y frescura del pescado que llega del puerto.</p></div>
+<div class="step"><h3>Limpieza</h3><p>Descongelado, eviscerado y corte de lomos.</p></div>
+<div class="step"><h3>Cocción</h3><p>Precocinado a vapor y enfriamiento controlado.</p></div>
+<div class="step"><h3>Envasado</h3><p>Llenado de latas con aceite, agua o salsa.</p></div>
+<div class="step"><h3>Esterilización</h3><p>Tratamiento térmico en autoclave.</p></div>
+<div class="step"><h3>Despacho</h3><p>Etiquetado, embalaje y envío al puerto.</p></div>
+</div>
+<div class="screen" id="scr">
+<svg viewBox="0 0 400 150" aria-label="Línea de producción de latas">
+<rect width="400" height="150" fill="#0b2e4f"/>
+<rect y="100" width="400" height="16" fill="#3b566e"/><g fill="#6f8aa0"><circle cx="20" cy="124" r="8"/><circle cx="100" cy="124" r="8"/><circle cx="180" cy="124" r="8"/><circle cx="260" cy="124" r="8"/><circle cx="340" cy="124" r="8"/></g>
+<g class="can"><rect x="0" y="68" width="38" height="32" rx="3" fill="#cfd8de"/><rect x="0" y="76" width="38" height="16" fill="#f28c28"/></g>
+<g class="can" style="animation-delay:-2.3s"><rect x="0" y="68" width="38" height="32" rx="3" fill="#cfd8de"/><rect x="0" y="76" width="38" height="16" fill="#f28c28"/></g>
+<g class="can" style="animation-delay:-4.6s"><rect x="0" y="68" width="38" height="32" rx="3" fill="#cfd8de"/><rect x="0" y="76" width="38" height="16" fill="#f28c28"/></g>
+<rect x="150" y="20" width="12" height="44" fill="#6f8aa0"/><rect x="132" y="14" width="48" height="12" rx="4" fill="#1b9aaa"/>
+<text x="12" y="22" fill="#fff" font-size="11" font-family="sans-serif">Línea de envasado · Planta Salinas</text>
+</svg>
+<button class="btn pl" id="pb">⏸ Pausar</button>
+</div>
+</section>
+
+<section id="calidad">
+<h2>Calidad, seguridad y ambiente</h2><p class="sub">Nuestros compromisos de cada día.</p>
+<div class="badges" style="margin-bottom:20px"><span>HACCP</span><span>BPM</span><span>ISO 22000</span><span>Pesca responsable</span></div>
+<div class="two">
+<div class="box"><h3>Seguridad industrial</h3><ul><li>Uso obligatorio de equipo de protección personal</li><li>Capacitaciones y simulacros periódicos</li><li>Señalización y mantenimiento preventivo de maquinaria</li></ul></div>
+<div class="box"><h3>Medio ambiente</h3><ul><li>Tratamiento de aguas residuales</li><li>Aprovechamiento de subproductos del pescado</li><li>Compra de pesca de proveedores con prácticas sostenibles</li></ul></div>
+</div>
+</section>
+
+<section id="cotizar">
+<h2>Solicita una cotización</h2><p class="sub">Atendemos distribuidores, supermercados y compradores internacionales.</p>
+<form id="f">
+<input id="e" placeholder="Nombre de la empresa" required>
+<input type="email" placeholder="Correo electrónico" required>
+<select id="p"></select>
+<input id="c" type="number" min="1" value="1" aria-label="Cantidad en cajas">
+<textarea rows="2" placeholder="Destino y comentarios"></textarea>
+<button class="btn" type="submit">Enviar solicitud</button>
+<div id="ok" role="status"></div>
+</form>
+</section>
+
+<section id="contacto">
+<h2>Contacto</h2>
+<div class="two">
+<div class="box"><h3>Planta y oficinas</h3><ul><li>📍 Sector Puerto Pesquero, Salinas, Santa Elena, Ecuador</li><li>📞 099 999 9999</li><li>✉️ ventas@mardesalinas.com.ec</li><li>🕒 Lunes a viernes, 07:00 – 17:00</li></ul></div>
+<div class="box"><h3>Síguenos</h3><div class="soc"><span>📘 Facebook /MarDeSalinasAlimentos</span><span>📸 Instagram @mardesalinas.alimentos</span><span>💼 LinkedIn Mar de Salinas Alimentos S.A.</span><span>▶️ YouTube @MarDeSalinasOficial</span></div></div>
+</div>
+</section>
+<footer>© 2026 Mar de Salinas Alimentos S.A. · Salinas, Ecuador</footer>
+
+<script>
+var P=[["Atún en aceite","Lata de 170 g","#f28c28","Lomos de atún cocidos y envasados en aceite vegetal, que conserva la jugosidad y realza el sabor. Fuente de proteína y omega-3."],["Atún en agua","Lata de 170 g","#1b9aaa","Atún en su propio jugo con agua. Menos grasa y menos calorías, ideal para dietas y ensaladas."],["Atún con vegetales","Lata de 160 g","#5aa845","Mezcla de atún con vegetales cocidos. Producto listo para consumir, práctico y balanceado."],["Filetes congelados","Caja de 10 kg","#c9433b","Cortes de pescado limpios, congelados a baja temperatura para conservar frescura. Para restaurantes y supermercados."]];
+function can(c){return '<svg viewBox="0 0 120 100"><ellipse cx="60" cy="24" rx="38" ry="9" fill="#e4eaee"/><rect x="22" y="24" width="76" height="52" fill="#cfd8de"/><rect x="22" y="36" width="76" height="28" fill="'+c+'"/><path d="M38 50Q48 42 60 50Q48 58 38 50ZM60 50L68 44V56Z" fill="#fff"/><ellipse cx="60" cy="76" rx="38" ry="9" fill="#b5c2cb"/></svg>'}
+var g=document.getElementById("prod"),s=document.getElementById("p");
+P.forEach(function(x){g.innerHTML+='<div class="card">'+can(x[2])+'<h3>'+x[0]+'</h3><p>'+x[1]+'</p><p class="cn"><b>Concepto:</b> '+x[3]+'</p></div>';s.innerHTML+="<option>"+x[0]+" ("+x[1]+")</option>"});
+var sc=document.getElementById("scr"),pb=document.getElementById("pb");
+pb.onclick=function(){var p=sc.classList.toggle("paused");pb.textContent=p?"▶ Reanudar":"⏸ Pausar"};
+document.querySelectorAll("[data-n]").forEach(function(el){var t=+el.dataset.n,i=0,st=Math.max(1,Math.ceil(t/50));var iv=setInterval(function(){i=Math.min(t,i+st);el.textContent=i;if(i>=t)clearInterval(iv)},40)});
+document.getElementById("f").onsubmit=function(e){e.preventDefault();document.getElementById("ok").textContent="Gracias, "+document.getElementById("e").value+". Recibimos tu solicitud de "+document.getElementById("c").value+" caja(s) de «"+s.value+"»."};
+</script>
+</body>
+</html>
